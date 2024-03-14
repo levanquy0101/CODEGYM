@@ -1,0 +1,77 @@
+html{
+    /*margin: 0;*/
+    /*padding: 0;*/
+    font-size: 15px;
+    font-family: Helvetica;
+    background-color: #a9a9a9;
+}
+
+body{
+    margin: 0 auto;
+    width: 80%;
+}
+
+header{
+    height: 60px;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav{
+    height: 30px;
+    background: blue;
+}
+
+nav ul{
+    list-style: none;
+    /* default have padding marging so  */
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 7px;
+    margin-left: 10px;
+}
+
+nav ul li{
+    display: inline;
+}
+
+main{
+    height: 800px;
+    background: green;
+    display: flex;
+}
+
+article{
+    flex: 8;
+    /*height: 500px;*/
+    background: lightyellow;
+}
+
+section{
+   background: red;
+    padding: 5px;
+    margin: 9px;
+    border: 1px solid;
+    /*height: 150px;*/
+    height: 22%;
+}
+
+aside{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    height: 50px;
+    background: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

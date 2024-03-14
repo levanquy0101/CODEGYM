@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div{
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+<div>
+<button type="button" onclick="showMessage1();">Click Me to alert</button>
+
+<script>
+  function showMessage1(){
+    alert('Xin chào!');
+  }
+</script>
+</div>
+
+<div>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessage2();">Click Me to show div</button>
+<script>
+  function showMessage2(){
+    document.getElementById('messageDiv').innerHTML = 'Xin chào!';
+  }
+</script>
+</div>
+
+<div>
+<button type="button" onclick="showMessage3();">Click Me to show document</button>
+<script>
+  function showMessage3(){
+    document.write('Xin chào!');
+  }
+</script>
+</div>
+
+<div>
+<button type="button" onclick="showMessage4();">Click Me to show log</button>
+<script>
+  function showMessage4(){
+    console.log('Xin chào!');
+  }
+</script>
+</div>
+</body>
+</html>

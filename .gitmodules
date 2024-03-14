@@ -1,0 +1,18 @@
+[submodule "module3/m3_case_study_db"]
+	path = module3/m3_case_study_db
+	url = https://github.com/naqforever/m3_case_study_db.git
+[submodule "module3/m3_case_study_web"]
+	path = module3/m3_case_study_web
+	url = https://github.com/naqforever/m3_case_study_web.git
+[submodule "module5/m5_case_study"]
+	path = module5/m5_case_study
+	url = https://github.com/naqforever/m5_case_study.git
+[submodule "module4/m4_case_study"]
+	path = module4/m4_case_study
+	url = https://github.com/naqforever/m4_case_study.git
+[submodule "module2/src/m2_case_study"]
+	path = module2/src/m2_case_study
+	url = https://github.com/naqforever/m2_case_study.git
+[submodule "module1/m1_case_study"]
+	path = module1/m1_case_study
+	url = https://github.com/naqforever/m1_case_study.git

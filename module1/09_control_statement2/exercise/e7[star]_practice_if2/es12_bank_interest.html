@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const loanAmount = +prompt('Loan amount');
+    const interestRate = +prompt('interest rate');
+    const loanTerm = +prompt('Loan term');
+    const total = loanAmount *  Math.pow((1 + interestRate),loanTerm);
+    console.log(`total: ${total}`)
+</script>
+</body>
+</html>

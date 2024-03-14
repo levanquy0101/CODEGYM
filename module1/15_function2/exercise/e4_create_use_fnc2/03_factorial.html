@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const f = v => {
+    let res = 1;
+    for (let i = 1; i <= v; i++) {
+      res*=i;
+    }
+
+    return res;
+  }
+
+  const val = prompt("Enter a number:")
+  alert(`factory of ${val}: ${f(val)}`);
+</script>
+
+</body>
+</html>

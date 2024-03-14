@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+
+    for (let i = 0; i < 5; i++) {
+        const tmp = +prompt(`enter number ${i + 1}`);
+        a.push(tmp);
+    }
+
+    for (let i = 0; i < a.length / 2; i++) {
+        [a[i], a[a.length - 1 - i]] = [a[a.length - 1 - i], a[i]];
+
+        /*let t = a[i];
+        a[i] = a[a.length-1 -i];
+        a[a.length-1-i] = t;*/
+    }
+
+    console.log(a);
+
+    // a.reverse();
+</script>
+</body>
+</html>

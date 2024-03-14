@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Currency</title>
+    <style>
+        section{
+            float: left;
+            width: 20%;
+        }
+
+        select{
+            width: 200px;
+        }
+
+        body > div{
+            height: 50px;
+        }
+
+        section div{
+            font-weight: bold;
+        }
+
+        #res{
+            color: blue;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <section>
+        <div>Amount</div>
+        <input type="number" id="numAmount">
+    </section>
+
+    <section>
+        <div>From Currency</div>
+        <select id="slFromCur">
+            <option selected>USD</option>
+            <option>EUR</option>
+            <option>JPY</option>
+            <option>GBP</option>
+            <option>VND</option>
+        </select>
+    </section>
+
+    <section>
+        <div>To Currency</div>
+        <select id="slToCur">
+            <option selected>VND</option>
+            <option>EUR</option>
+            <option>JPY</option>
+            <option>GBP</option>
+            <option>USD</option>
+        </select>
+    </section>
+
+    <section>
+        <div>&nbsp;</div>
+        <button type="button" onclick="ConvertCurrency()">Convert</button>
+    </section>
+</div>
+
+
+<div id="res"></div>
+<script>
+    function ConvertCurrency() {
+        const amount = parseInt(document.getElementById("numAmount").value);
+        const fromCur = document.getElementById("slFromCur").value;
+        const toCur = document.getElementById("slToCur").value;
+        const result = document.getElementById("res");
+        let res = "";
+
+        switch (fromCur) {
+            case "USD":
+                switch (toCur) {
+                    case "EUR":
+                        res = amount + " USD = " + (amount * 0.93) + " EUR";
+                        break;
+                    case "GBP":
+                        res = amount + " USD = " + (amount * 0.81) + " EUR";
+                        break;
+                    case "JPY":
+                        res = amount + " USD = " + (amount * 106) + " EUR";
+                        break;
+                    case "VND":
+                        res = amount + " USD = " + (amount * 23500) + " VND";
+                        break;
+                    default:
+                        res = "Equal together";
+                }
+                break;
+            case "EUR":
+                alert("from EUR");
+                break;
+            case "GBP":
+                alert("from GBP");
+                break;
+            case "JPY":
+                alert("from JPY");
+                break;
+            case "VND":
+                switch (toCur) {
+                    case "EUR":
+                        res = amount + " VND = " + (amount * 0.00004) + " EUR";
+                        break;
+                    case "GBP":
+                        res = amount + " VND = " + (amount * 0.00002) + " GBP";
+                        break;
+                    case "JPY":
+                        res = amount + " VND = " + (amount * 0.0045) + " JPY";
+                        break;
+                    case "USD":
+                        res = amount + " VND = " + (amount / 23500) + " USD";
+                        break;
+                    default:
+                        res = "Equal together";
+                }
+                break;
+        }
+
+        result.innerText = "Result: " + res;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const kWh = +prompt("kWh used in month");
+  if(kWh > 400){
+    console.log(`payment: ${kWh*2587} vnd`)
+  }
+  else if(avgMark > 300){
+    console.log(`payment: ${kWh*2503} vnd`)
+  }
+  else if(avgMark > 200){
+    console.log(`payment: ${kWh*2242} vnd`)
+  }
+  else if(avgMark > 100){
+    console.log(`payment: ${kWh*1786} vnd`)
+  }
+  else {
+    console.log(`payment: ${kWh*1533} vnd`)
+  }
+</script>
+</body>
+</html>

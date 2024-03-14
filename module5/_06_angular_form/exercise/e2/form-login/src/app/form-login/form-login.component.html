@@ -1,0 +1,21 @@
+<form [formGroup]="formLogin" (ngSubmit)="login()">
+<fieldset>
+  <legend>Login Form</legend>
+  <div>
+    <label for="username">Username:</label>
+    <input id="username" formControlName="username">
+    <div *ngIf="f['username'].errors?.['required'] && f['username'].touched">Username is required</div>
+  </div>
+  <div>
+    <label for="password" >Password:</label>
+    <input id="password" formControlName="password">
+    <div *ngIf="f['password'].invalid && f['username'].touched">
+      <div *ngIf="f['password'].errors?.['required']">Password is required</div>
+      <div *ngIf="f['password'].errors?.['minlength']">Password must be greater than 6 characters</div>
+    </div>
+  </div>
+  <div>
+    <button [disabled]="formLogin.invalid">Login</button>
+  </div>
+</fieldset>
+</form>

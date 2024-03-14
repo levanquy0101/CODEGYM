@@ -1,0 +1,3 @@
+<app-img-slide [src]="listImage[index]"></app-img-slide>
+<button [disabled]="index == 0" (click)="change(false)">Previous</button>
+<button [disabled]="index >= listImage.length -1" (click)="change(true)">Next</button>

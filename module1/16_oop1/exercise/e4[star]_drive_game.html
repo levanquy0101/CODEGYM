@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<canvas id="gameCanvas"></canvas>
+
+<script>
+    const ORIENTATION_LEFT = "left";
+    const ORIENTATION_RIGHT = "right";
+    const ORIENTATION_UP = "up";
+    const ORIENTATION_DOWN = "down";
+
+    const SPEED_MEDIUM = 0.5;
+    const SPEED_FAST = 1;
+    // let is_fast_ctrl = false;
+    // let status;
+
+    const win = {
+        w: window.innerWidth,
+        h: window.innerHeight,
+    }
+
+    const canvas = document.getElementById('gameCanvas')
+    const ctx = canvas.getContext('2d')
+
+    const img = new Image()
+    let run;
+
+    const resize = () => {
+        win.w = window.innerWidth;
+        win.h = window.innerHeight;
+        canvas.width = win.w - 3;
+        canvas.height = win.h - 6;
+        canvas.style.width = `${canvas.width}px`
+        canvas.style.height = `${canvas.height}px`
+    }
+
+    const render = () => {
+        ctx.clearRect(0, 0, win.w, win.h)
+        if (car.orientation === ORIENTATION_LEFT || car.orientation === ORIENTATION_RIGHT) {
+            ctx.drawImage(img, car.x, car.y, 120, 72)
+        } else {
+            ctx.drawImage(img, car.x, car.y, 72, 120)
+        }
+
+        // requestAnimationFrame(render);
+    }
+
+    class Car {
+        constructor(x, y, speed, orientation) {
+            this.x = x;
+            this.y = y;
+            this.speed = speed;
+            this.orientation = orientation;
+        }
+
+        move() {
+            // console.log(is_fast_ctrl);
+            // let speedCtrl = is_fast_ctrl ? 2: 0;
+            let speedCtrl = 0;
+
+            console.log(speedCtrl);
+            switch (this.orientation) {
+                case ORIENTATION_DOWN:
+                    run = setInterval(function () {
+                        car.y += car.speed + speedCtrl;
+                        car.buildImage();
+
+                        if (car.y > canvas.height - 120) {
+                            alert("game over");
+                            clearInterval(run);
+                        }
+                    }, 0);
+
+                    break;
+                case ORIENTATION_UP:
+                    run = setInterval(function () {
+                        car.y -= car.speed + speedCtrl;
+                        car.buildImage();
+
+                        if (car.y < 0) {
+                            alert("game over");
+                            clearInterval(run);
+                        }
+                    }, 0);
+
+                    break;
+                case ORIENTATION_LEFT:
+                    run = setInterval(function () {
+                        car.x -= car.speed + speedCtrl;
+                        car.buildImage();
+
+                        if (car.x < 0) {
+                            alert("game over");
+                            clearInterval(run);
+                        }
+                    }, 0);
+
+                    break;
+                case ORIENTATION_RIGHT:
+                    run = setInterval(function () {
+                        car.x += car.speed + speedCtrl;
+                        car.buildImage();
+                        if (car.x > canvas.width - 112) {
+                            alert("game over");
+                            clearInterval(run);
+                        }
+                    }, 0);
+
+                    break;
+            }
+        }
+
+        buildImage() {
+            img.onload = function () {
+                resize()
+                render()
+            };
+            img.src = `img/car_${this.orientation}.png`;
+        }
+    }
+
+    let car = new Car(0, 0, SPEED_MEDIUM, ORIENTATION_LEFT);
+    car.buildImage();
+
+    function moveSelection(evt) {
+        // if (evt.keyCode != 17 && evt.keyCode != 16 && evt.keyCode != 32) {
+        //     status = evt.keyCode
+        // }
+        // console.log("bbbb");
+
+        switch (evt.key) {
+            case "Control":
+                // console.log("aaa");
+                // clearInterval(run);
+                // is_fast_ctrl = true;
+                // switch (status) {
+                //     case "ArrowLeft":
+                //         car.orientation = ORIENTATION_LEFT;
+                //         car.move();
+                //         break;
+                //     case "ArrowUp":
+                //         car.orientation = ORIENTATION_UP;
+                //         car.move();
+                //         break;
+                //     case "ArrowRight":
+                //         car.orientation = ORIENTATION_RIGHT;
+                //         car.move();
+                //         break;
+                //     case "ArrowDown":
+                //         car.orientation = ORIENTATION_DOWN;
+                //         car.move();
+                //         break;
+                // }
+                // ;
+                // break;
+            case "ArrowLeft":
+                clearInterval(run);
+                car.orientation = ORIENTATION_LEFT;
+                car.move();
+                break;
+            case "ArrowUp":
+                clearInterval(run);
+                car.orientation = ORIENTATION_UP;
+                car.move();
+                break;
+            case "ArrowRight":
+                clearInterval(run);
+                car.orientation = ORIENTATION_RIGHT;
+                car.move();
+                break;
+            case "ArrowDown":
+                clearInterval(run);
+                car.orientation = ORIENTATION_DOWN;
+                car.move();
+                break;
+        }
+    }
+
+
+    // window.addEventListener("keydown", (e) => {
+    //     if(e.key == "Control"){
+    //         clearInterval(run);
+    //         console.log("before isfast: " + is_fast_ctrl);
+    //         is_fast_ctrl = false;
+    //         console.log("after isfast" + is_fast_ctrl);
+    //     }
+    // });
+
+
+    window.addEventListener("keydown", moveSelection);
+</script>
+</body>
+</html>

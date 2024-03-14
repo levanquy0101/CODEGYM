@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const balance = +prompt("enter initial balance");
+    const rateInterest = +prompt("enter annual interest");
+    const months = +prompt("enter number of months");
+    let total = 0;
+
+    for (let i = 0; i < months; i++) {
+        total += (rateInterest / 12 / 100) * balance;
+    }
+
+    console.log("total: " + total);
+</script>
+</body>
+</html>

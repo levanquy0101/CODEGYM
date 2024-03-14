@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 second timer</title>
+</head>
+<body>
+<main>
+    <span style="color: blue">0</span> seconds
+</main>
+
+<script>
+    let sp = document.querySelector("span"),
+        seconds = 1;
+
+    const interval = setInterval(
+        () => {
+            sp.textContent = seconds++;
+
+            if (seconds > 98) {
+                clearInterval(interval);
+                alert("done with 99")
+            }
+        },
+        1000)
+</script>
+</body>
+</html>

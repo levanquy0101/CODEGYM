@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let s = prompt();
+  let a = [];
+
+  for (let i = 0; i < s.length; i++) {
+    if(s[i].toUpperCase() === s[i]){
+      a.push(s[i].toLowerCase());
+    }
+    else {
+      a.push(s[i].toUpperCase());
+    }
+  }
+
+  console.log(a.join(""));
+</script>
+</body>
+</html>

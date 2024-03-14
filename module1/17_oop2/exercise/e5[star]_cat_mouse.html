@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Animal{
+        constructor(name = 'no name', weight) {
+            this.name = name;
+            this.weight = weight;
+        }
+
+        say(){
+            return "This is say method from Animal";
+        }
+    }
+
+    class Rat extends Animal{
+        constructor(name, weight, speed, statusAlive) {
+            super(name, weight);
+            this.speed = speed;
+            this.statusAlive = statusAlive;
+        }
+
+        say(){
+            return "chit chit";
+        }
+    }
+
+    class Cat extends Animal{
+        constructor(name, weight, maxSpeed) {
+            super(name, weight);
+            this.maxSpeed = maxSpeed;
+        }
+
+        say(){
+            return "meo meo";
+        }
+
+        catch(rat){
+            return  this.maxSpeed > rat.speed;
+        }
+
+        eat(rat){
+            if(rat.statusAlive){
+                this.weight += rat.weight;
+            }
+        }
+    }
+
+    const rat = new Rat("jerry", 1, 3, true);
+    const cat = new Cat("tom", 5, 2);
+
+    console.log(rat.say());
+    console.log(cat.say());
+
+    if(cat.catch(rat)){
+        console.log(`before eat, cat's weight: ${cat.weight}`);
+        cat.eat(rat);
+        console.log(`after eat, cat's weight: ${cat.weight}`);
+    }
+    else {
+        console.log("not catch because cat's max speed less than rat's speed");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i = 1; i < 20; i++) {
+        let tmp = fibonacci(i);
+            if(tmp % 5 === 0){
+                console.log(tmp);
+                break;
+            }
+    }
+
+    function fibonacci(n) {
+        if (n === 0 || n === 1) {
+            return n;
+        }
+
+        return fibonacci(n - 2) + fibonacci(n - 1);
+    }
+</script>
+</body>
+</html>

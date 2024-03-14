@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const val = prompt("Enter a number:")
+  alert(isPrime(val));
+
+  function isPrime(val){
+    if(val <2){
+      return false;
+    }
+
+    if(val === 2){
+        return true;
+    }
+
+    for (let i = 2;  i < val; i++) {
+      if(val % i === 0){
+        return false;
+      }
+    }
+
+    return true;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03f6cc30-6fbd-4ffb-b2c0-3153faf0c585" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../module5_react/_01_ux_ui_typescript/practice/p5_check_prime/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5_react/_01_ux_ui_typescript/practice/p5_check_prime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../module5_react/_01_ux_ui_typescript/practice/p5_check_prime/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2AYbOIFjTF1XPBYnTNGNBSxADIB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/quocnna.UNITEK/Desktop/codegym/module2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3494253&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\quocnna.UNITEK\Desktop\codegym\module2\src\m2_case_study\FuramaManager\service" />
+      <recent name="C:\Users\quocnna.UNITEK\Desktop\codegym\module2\src\m2_case_study\FuramaManager\controller" />
+      <recent name="C:\Users\quocnna.UNITEK\Desktop\codegym\module2\src\m2_case_study\FuramaManager" />
+      <recent name="C:\Users\quocnna.UNITEK\Desktop\codegym\module2\src\m2_case_study" />
+      <recent name="C:\Users\quocnna.UNITEK\Desktop\git_cg\module2\src\_08_clean_code_refactoring\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\quocnna.UNITEK\Desktop\git_cg\module2\src\_08_clean_code_refactoring\lib\junit4" />
+      <recent name="C:\Users\quocnna.UNITEK\Desktop\git_cg\module2\src\_08_clean_code_refactoring\lib\junit5" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="m2_case_study.FuramaManager.controller" />
+      <recent name="m2_case_study.FuramaManager.util" />
+      <recent name="_12_java_collection_framework.exercise.e1.advance" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.GreatestCommonDivisor1">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="NimRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="nim.task.build.to.cache" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreatestCommonDivisor1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_02_loop_in_java.practice.p3_greatest_common_divisor.GreatestCommonDivisor1" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_02_loop_in_java.practice.p3_greatest_common_divisor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_17_binary_file_serialization.exercise.e1_product_manager.Test" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_17_binary_file_serialization.exercise.e1_product_manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_12_java_collection_framework.practice.p1_using_map.TestMap" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_12_java_collection_framework.practice.p1_using_map.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStackQueueBuiltin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_11_stack_queue.practice.p1_impl_stack_by_linkedlist.TestStackQueueBuiltin" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_11_stack_queue.practice.p1_impl_stack_by_linkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_12_java_collection_framework.practice.p3_comparable_comparator.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_12_java_collection_framework.practice.p3_comparable_comparator.Test" />
+      <module name="module2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_12_java_collection_framework.practice.p3_comparable_comparator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GreatestCommonDivisor1" />
+        <item itemvalue="Application.TestStackQueueBuiltin" />
+        <item itemvalue="Application._12_java_collection_framework.practice.p3_comparable_comparator.Test" />
+        <item itemvalue="Application.TestMap" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03f6cc30-6fbd-4ffb-b2c0-3153faf0c585" name="Default Changelist" comment="" />
+      <created>1655189432244</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655189432244</updated>
+      <workItem from="1655189433670" duration="6826000" />
+      <workItem from="1655196881486" duration="54000" />
+      <workItem from="1655349855311" duration="670000" />
+      <workItem from="1655439353321" duration="17166000" />
+      <workItem from="1655892413869" duration="848000" />
+      <workItem from="1656399314709" duration="1956000" />
+      <workItem from="1656929294267" duration="281000" />
+      <workItem from="1657097295037" duration="14430000" />
+      <workItem from="1657261854936" duration="860000" />
+      <workItem from="1657703788354" duration="1570000" />
+      <workItem from="1657765101528" duration="1143000" />
+      <workItem from="1661484474870" duration="358000" />
+      <workItem from="1661484845645" duration="18000" />
+      <workItem from="1661484942227" duration="986000" />
+      <workItem from="1661487164685" duration="235000" />
+      <workItem from="1661487677144" duration="65000" />
+      <workItem from="1661487767334" duration="33000" />
+      <workItem from="1661487870350" duration="359000" />
+      <workItem from="1661488243042" duration="2400000" />
+      <workItem from="1661493775410" duration="166000" />
+      <workItem from="1661503436548" duration="558000" />
+      <workItem from="1661504131961" duration="60000" />
+      <workItem from="1661504201365" duration="3509000" />
+      <workItem from="1668524145905" duration="3284000" />
+      <workItem from="1668563570819" duration="19000" />
+      <workItem from="1668762211950" duration="3413000" />
+      <workItem from="1669014076318" duration="12000" />
+      <workItem from="1672715247216" duration="987000" />
+      <workItem from="1672716793547" duration="376000" />
+      <workItem from="1672717496811" duration="24275000" />
+      <workItem from="1672797080299" duration="19178000" />
+      <workItem from="1692867747470" duration="6190000" />
+      <workItem from="1692874292029" duration="284000" />
+      <workItem from="1693208323778" duration="45000" />
+      <workItem from="1693362860407" duration="1924000" />
+      <workItem from="1693364813920" duration="5037000" />
+      <workItem from="1693383097047" duration="967000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_13_search_algorithm/exercise/S2_StringSequenceMaxLength.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_10_dsa_list/exercise/e2_impl_linkedlist/Test.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_12_java_collection_framework/exercise/e1/advance/GenericService.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_12_java_collection_framework/exercise/e1/advance/GenericService.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_12_java_collection_framework/exercise/e1/advance/GenericService.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_08_clean_code_refactoring/practice/p3_split_method/Cylinder.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_08_clean_code_refactoring/practice/p3_split_method/CylinderRefactoring.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/m2_case_study/FuramaManager/view/BookingView.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/m2_case_study/FuramaManager/service/PromotionServiceImpl.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/m2_case_study/FuramaManager/service/EmployeeServiceImpl.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_17_binary_file_serialization/exercise/e1_product_manager/ProductService.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_17_binary_file_serialization/exercise/e1_product_manager/ProductService.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_17_binary_file_serialization/exercise/e1_product_manager/ProductService.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_12_java_collection_framework/practice/p1_using_map/TestMap.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/_11_stack_queue/practice/p1_impl_stack_by_linkedlist/TestStackQueueBuiltin.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="fieldArrays" />
+        <watch expression="bookingService.findAll()" language="JAVA" />
+        <watch expression="(List&lt;Product)(new ObjectInputStream(new FileInputStream(path))).readObject()" language="JAVA" custom="_12_java_collection_framework.exercise.e1.Product" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

@@ -1,0 +1,16 @@
+{
+  "Book": {
+    "field" : {
+      "id": "int",
+      "title": "String",
+      "price": "double",
+      "author": "String",
+      "publishDate" : "String"
+    },
+    "search" : "author",
+    "sort" : {
+      "by": "price",
+      "dir": "DESC"
+    }
+  }
+}

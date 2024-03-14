@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script id="avg_mark">
+  const physical = +prompt("physical");
+  const chemical = +prompt("chemical");
+  const biology = +prompt("biology");
+
+  const avg = (physical + chemical + biology)/3;
+  document.write("average: " + avg + "<br/>");
+</script>
+
+<script id="convert_temperature">
+  const c = +prompt("c");
+  const f = (c*9)/5 + 32;
+  document.write("fahrenheit: " + f + "<br/>");
+</script>
+
+<script id="area_circle">
+  const r = prompt("Enter circle radius");
+  const a = r*r*Math.PI;
+  document.write("area circle: " + a + "<br/>");
+</script>
+
+<script id="perimeter_circle">
+  const p = r*2*Math.PI;
+  document.write("perimeter circle: " + p + "<br/>");
+</script>
+</body>
+</html>

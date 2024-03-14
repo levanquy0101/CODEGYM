@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let prime = 2
+
+    while (count < 20) {
+        if (isPrime(prime)) {
+            document.write(`${prime}<br>`)
+            count++;
+        }
+
+        prime++;
+    }
+
+    function isPrime(val) {
+        for (let i = 2; i < val; i++) {
+            if (val % i === 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+</script>
+</body>
+</html>

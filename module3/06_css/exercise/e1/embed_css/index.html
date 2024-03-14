@@ -1,0 +1,41 @@
+<!--Priority in CSS:
+Important
+Inline CSS
+id selector
+class, attributes
+tag-->
+
+
+<!--Inline Styling > Style Sheets > Inheritance
+Inheritance has the lowest priority because the child element is ‘influenced’ by its parent, we haven’t targeted any rule to it.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        h1{
+            color: yellow;
+        }
+        p{
+            color: red;
+            font-size: 12px;
+            font-family: Tahoma;
+        }
+    </style>
+
+<!--    priority with nearest-->
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<h1 style="color: green">This is heading 1</h1>
+<p style="color: blue; font-size: 12px; font-family: Helvetica ">This is an ordinary english. Notice that this text is blue. The default text color for a page is defined in selector default</p>
+
+<h1>This is heading 1</h1>
+<p>This is an ordinary english. Notice that this text is blue. The default text color for a page is defined in selector default</p>
+
+<h1>This is heading 1</h1>
+<p>This is an ordinary english. Notice that this text is blue. The default text color for a page is defined in selector default</p>
+</body>
+</html>

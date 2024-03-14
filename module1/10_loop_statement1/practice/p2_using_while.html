@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // sum total number input
+    let res = 0, n = 0;
+
+    while (n !== -1) {
+        n = +prompt("enter number");
+
+        if(n !== -1){
+            res += n;
+        }
+    }
+
+    console.log(res);
+
+    // display width hr
+
+    let i = 1;
+    while (i < 100) {
+        document.write("<hr width = " + i + "%>");
+        i++;
+    }
+</script>
+</body>
+</html>

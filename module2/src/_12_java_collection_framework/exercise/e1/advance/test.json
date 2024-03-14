@@ -1,0 +1,14 @@
+{
+  "Product": {
+    "field" : {
+      "id": "int",
+      "name": "String",
+      "price": "double"
+    },
+    "search" : "name",
+    "sort" : {
+      "by": "price",
+      "dir": "ASC"
+    }
+  }
+}

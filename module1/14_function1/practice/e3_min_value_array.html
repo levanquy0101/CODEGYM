@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+  let arr1 = [7, 12, 6, 9, 20, 56, 8];
+  if(arr1.toString().length == 0)
+  {
+      alert("empty array!");
+  }
+  else
+  {
+      let min = minArray(arr1);
+      alert(min);
+  }
+
+  function minArray(arr) {
+    let min = arr[0];
+    for(let i = 1; i < arr.length; i++){
+      if(arr[i] < min){
+        min = arr[i];
+      }
+    }
+
+    return min;
+  }
+</script>
+</body>
+</html>

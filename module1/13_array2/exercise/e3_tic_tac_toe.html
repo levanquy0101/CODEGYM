@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #78433D;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+        }
+
+        section div {
+            width: 30px;
+            height: 30px;
+            background: #C73A2A;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<main></main>
+<script>
+    let main = document.querySelector("main");
+    let boardSize =20;
+    let a;
+
+    newGame();
+
+    function newGame(){
+        a = [];
+        main.innerHTML = "";
+        let turnNext = false;
+
+        for (let i = 0; i < boardSize; i++) {
+            a[i] = [];
+            const row = document.createElement("section");
+
+            for (let j = 0; j < boardSize; j++) {
+                const cell = document.createElement("div");
+                a[i][j] = '';
+                row.appendChild(cell);
+
+                cell.onclick = function () {
+                    a[i][j] = turnNext ? "o" : "x";
+                    turnNext = !turnNext;
+                    cell.innerText = a[i][j];
+                    console.log(a);
+
+                    if (checkWin(a[i][j])) {
+                        alert("win");
+                        newGame();
+                    }
+                }
+            }
+
+            main.appendChild(row);
+        }
+    }
+
+    function checkWin(val) {
+        for (let i = 0; i < boardSize; i++) {
+            for (let j = 0; j < boardSize; j++) {
+                if (a[i][j] === val) {
+                    if (a[i][j + 1] === val && a[i][j + 2] === val) {
+                        return true;
+                    }
+
+                    if (a[i + 1]) {
+                        if ((a[i + 1][j] === val && a[i + 2][j] === val)
+                            || (a[i + 1][j + 1] === val && a[i + 2][j + 2] === val)
+                            || (a[i + 1][j - 1] === val && a[i + 2][j - 2] === val)) {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /*    function checkWin(val) {
+            return checkNorthToSouthChainValue(val) || checkWestToEastChainValue(val)
+                || checkNorthWestToSouthEastChainValue(val) || checkNorthEastToSouthWestChainValue(val);
+        }
+
+        function checkNorthToSouthChainValue(val) {
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    if (a[i][j] === val && a[i][j + 1] && a[i][j + 2]) {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        function checkWestToEastChainValue(val) {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 5; j++) {
+                    if (a[i][j] === val && a[i + 1][j] && a[i + 2][j]) {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        function checkNorthWestToSouthEastChainValue(val) {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 5; j++) {
+                    if (a[i][j] === val && a[i + 1][j + 1] && a[i + 2][j + 2]) {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        function checkNorthEastToSouthWestChainValue(val) {
+            for (let i = 0; i < 3; i++) {
+                for (let j = 0; j < 5; j++) {
+                    if (a[i][j] === val && a[i + 1][j - 1] && a[i + 2][j - 2]) {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }*/
+</script>
+</body>
+</html>

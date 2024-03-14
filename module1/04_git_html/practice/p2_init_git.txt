@@ -1,0 +1,4 @@
+git init
+git remote add origin https://github.com/codegym-vn/my-new-project.git
+touch README.md
+git add . && git commit -m "up" && git push

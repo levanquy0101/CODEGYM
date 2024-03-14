@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i = 0; i < 20; i++) {
+        console.log(fibonacci(i));
+    }
+
+    function fibonacci(n) {
+        if (n === 0 || n === 1) {
+            return n;
+        }
+
+        return fibonacci(n - 2) + fibonacci(n - 1);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<h2>Word List</h2>
+<div *ngFor="let w of words">
+<div>
+  <a routerLink="/detail/{{w.word}}">{{w.word}}</a>
+</div>
+</div>
+<br/>
+<div>
+  <input #ipSearch>
+  <button (click)="search(ipSearch.value)">Search</button>
+</div>
+<router-outlet></router-outlet>

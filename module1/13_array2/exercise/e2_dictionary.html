@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+Search by <input>
+<button>Click</button>
+<div></div>
+<script>
+    const a = ["hello", "beautiful", "love"];
+    const b = ["xin chao", "dep", "yeu"];
+
+    document.querySelector("button").onclick = function () {
+        const word = document.querySelector("input").value;
+        document.querySelector("div").textContent = b[a.findIndex(e => e === word)];
+    }
+</script>
+</body>
+</html>

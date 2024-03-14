@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const s = prompt("enter your string");
+  let count = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    if("aeiou".includes(s[i].toLowerCase())){
+      count++
+    }
+  }
+
+  console.log(count);
+</script>
+</body>
+</html>

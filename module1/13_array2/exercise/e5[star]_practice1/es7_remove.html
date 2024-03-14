@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = [];
+
+  for (let i = 0; i < 10; i++) {
+    const tmp = +prompt(`enter number ${i+1}`);
+    a.push(tmp);
+  }
+
+  const v = +prompt("enter v");
+
+  a = a.filter(e => e !== v);
+  console.log(a);
+
+/*  let b = [];
+  for (let i = 0, j =0; i < a.length; i++) {
+    if(a[i] !== v){
+      b[j++] = a[i];
+    }
+  }
+  console.log(b);*/
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+table{
+  width: 100%;
+}
+
+thead{
+  font-weight: bolder;
+  text-align: center;
+}
+
+table td:last-child{
+  width: 15%;
+}
+
+td{
+  border: 1px solid;
+}
+
+tr:nth-child(even){
+  background: darkgray;
+}
+
+tr:hover{
+  background-color: yellow;
+}
+
+a{
+  display:inline-block;
+  width:80px;
+  padding-left: 20px;
+}

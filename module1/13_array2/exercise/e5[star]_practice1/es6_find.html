@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = [];
+
+  for (let i = 0; i < 10; i++) {
+    const tmp = +prompt(`enter number ${i+1}`);
+    a.push(tmp);
+  }
+
+  const v = +prompt("enter v");
+  console.log(a.find(e => e ===v) ? `in array` : `not in array`);
+</script>
+</body>
+</html>

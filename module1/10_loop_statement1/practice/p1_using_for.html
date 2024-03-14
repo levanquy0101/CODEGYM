@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>JavaScript Loops</h2>
+<p id="demo"></p>
+<script>
+    // display number with loop
+    let text = "";
+
+    for (let i = 0; i < 5; i++) {
+        text += "The number is " + i + "<br>";
+    }
+
+    document.getElementById("demo").innerHTML = text;
+
+    // calculate sum number with loop
+    const num = +prompt("Enter your number: ");
+    let res =0;
+
+    for (let i = 1; i <= num; i++) {
+        res += i;
+    }
+
+    console.log(res);
+</script>
+</body>
+</html>

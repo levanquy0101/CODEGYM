@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body{
+        background: #3a65e2;
+      }
+
+      img{
+          position:relative;
+      }
+    </style>
+</head>
+<body onload="docReady()">
+<img style="left: 100px; top: 100px" src="https://cdn.dribbble.com/users/5455156/screenshots/14026201/media/48d9b9005b5260d4558079775d9c66bf.png?compress=1&resize=400x300&vertical=top" alt=""/>
+
+<script>
+  function docReady() {
+    let element = document.querySelector("img");
+    window.addEventListener('keydown', moveSelection);
+
+    function upArrowPressed() {
+      element.style.top = parseInt(element.style.top) - 100 + 'px';
+    }
+
+    function downArrowPressed() {
+      element.style.top = parseInt(element.style.top) + 100 + 'px';
+    }
+
+    function leftArrowPressed() {
+      element.style.left = parseInt(element.style.left) - 100 + 'px';
+    }
+
+    function rightArrowPressed() {
+      element.style.left = parseInt(element.style.left) + 100 + 'px';
+    }
+
+    function moveSelection(evt) {
+      switch (evt.keyCode) {
+        case 37:
+          leftArrowPressed();
+          break;
+        case 39:
+          rightArrowPressed();
+          break;
+        case 38:
+          upArrowPressed();
+          break;
+        case 40:
+          downArrowPressed();
+          break;
+      }
+    }
+  }
+
+
+</script>
+</body>
+</html>

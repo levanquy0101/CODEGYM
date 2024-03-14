@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const minutesInternal = +prompt("minutes internal used in month");
+    const minutesExternal = +prompt("minutes external used in month");
+    const minutesSMS = +prompt("minutes sms used in month");
+    const data = +prompt("data Mb used in month");
+
+    let res = (minutesInternal * 790) + (minutesExternal * 1200) + (minutesSMS * 350);
+
+    if (data > 1024) {
+        res += data * 1000;
+    } else if (avgMark > 512) {
+        res += data * 500;
+    } else {
+        res += data * 300;
+    }
+
+    console.log("final payment: " + res);
+</script>
+</body>
+</html>

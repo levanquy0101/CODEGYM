@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const n = +prompt("enter number's initial array")
+    let a = [];
+
+    for (let i = 0; i < n; i++) {
+        const tmp = +prompt(`enter number ${i + 1}`);
+        a.push(tmp);
+    }
+
+    console.log(`average: ${a.reduce((x, y) => x + y) / n}`);
+
+    /*let res = 0;
+    for (let i = 0; i < n; i++) {
+      res += a[i];
+    }
+
+    console.log(`average: ${res/n}`);*/
+</script>
+</body>
+</html>

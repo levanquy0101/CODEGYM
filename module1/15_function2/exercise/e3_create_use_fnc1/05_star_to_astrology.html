@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+  const astrologys = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+  const startToAstrology = v => astrologys[stars.findIndex(e => e == v)];
+
+  const star = prompt("Enter star:")
+  alert(startToAstrology(star))
+</script>
+</body>
+</html>

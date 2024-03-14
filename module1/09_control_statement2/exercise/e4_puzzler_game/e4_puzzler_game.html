@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            width: 50%;
+            text-align: center;
+            margin: 0 auto;
+            background-image: linear-gradient(0deg, #000000, #e74c3c);
+        }
+
+        #container {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+
+        img {
+            box-shadow: 4px 4px 9px red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Puzzle Game</title>
+</head>
+<body>
+<div id="container">
+    <div class="section">
+        <img src="/09_control_statement2/exercise/e4_puzzler_game/img/a1.jpg" name="1" height="150" width="620" alt=""/>
+        <img src="/09_control_statement2/exercise/e4_puzzler_game/img/a2.jpg" name="2" height="150" width="620" alt=""/>
+        <img src="/09_control_statement2/exercise/e4_puzzler_game/img/a3.jpg" name="3" height="150" width="620" alt=""/>
+        <img src="/09_control_statement2/exercise/e4_puzzler_game/img/a4.jpg" name="4" height="150" width="620" alt=""/>
+        <img src="/09_control_statement2/exercise/e4_puzzler_game/img/a5.jpg" name="5" height="150" width="620" alt=""/>
+    </div>
+</div>
+</body>
+<script>
+    const section = document.querySelector(".section");
+
+    section.addEventListener("click", e => {
+        let res = "";
+        const ele = e.target;
+        let numRandom = Math.floor(Math.random() * 24) + 1;
+
+        while (ele.name == numRandom) {
+            numRandom = Math.floor(Math.random() * 24) + 1;
+        }
+
+        ele.src = `/09_control_statement2/exercise/e4_puzzler_game/img/a${numRandom}.jpg`;
+        ele.name = numRandom;
+
+        const lsImg = section.querySelectorAll("img");
+        for (let i = 0; i < lsImg.length; i++) {
+            res += lsImg[i].name;
+        }
+
+        if (res === "12345" || res === "678910" || res === "1112131415" || res === "1617181920" || res === "202122232425") {
+            lsImg.forEach(element => {
+                element.style.boxShadow = "4px 4px 9px red";
+            })
+
+            setTimeout(function () {
+                alert("Congratulations! You are excellent");
+            }, 0);
+        } else {
+            lsImg.forEach(element => {
+                element.style.boxShadow = "2px 3px 3px black";
+            })
+        }
+    })
+</script>
+</html>

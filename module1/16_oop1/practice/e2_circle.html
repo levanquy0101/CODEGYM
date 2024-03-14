@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circle Class</title>
+</head>
+<body>
+<script>
+  class Circle{
+    constructor(radius, color) {
+      this.radius= radius;
+      this.color = color;
+    }
+
+    get Radius(){
+      return this.radius;
+    }
+
+    get Area(){
+      return Math.PI * this.radius * this.radius;
+    }
+  }
+
+  const radius = parseInt(prompt("Input a number:"));
+  let circle = new Circle(radius);
+  alert(`radius= ${circle.radius} and area= ${circle.Area}`);
+</script>
+</body>
+</html>

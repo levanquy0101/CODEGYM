@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const f = a => {
+    let newArr = [];
+
+    for (let i = a.length -1; i >= 0 ; i--) {
+      newArr.push(a[i]);
+    }
+
+    return newArr;
+  }
+
+  // alert([2,3,4,1,6,7,8].reverse());
+  // let numArrReversed = numArr.map(numArr.pop, [...numArr]);
+
+  alert(f([2,3,4,1,6,7,8]));
+
+</script>
+</body>
+</html>

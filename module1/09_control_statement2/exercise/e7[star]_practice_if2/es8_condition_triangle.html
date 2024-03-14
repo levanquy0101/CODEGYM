@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  const a = +prompt("a");
+  const b = +prompt("b");
+  const c = +prompt("c");
+
+  const isTriangle = (a > 0 && b > 0 && c > 0) && a + b > c && a+c>b && b+c>a;
+  console.log(isTriangle ? "valid" : "invalid")
+</script>
+</body>
+</html>

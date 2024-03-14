@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let a = [];
+
+  for (let i = 0; i < 10; i++) {
+    const tmp = +prompt(`enter number ${i+1}`);
+    a.push(tmp);
+  }
+
+  console.log(a.filter(e => e > 10));
+</script>
+</body>
+</html>

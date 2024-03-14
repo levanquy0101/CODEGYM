@@ -1,0 +1,11 @@
+<h2>Calculator</h2>
+<input #val1>
+<select #ope>
+  <option>+</option>
+  <option>-</option>
+  <option>*</option>
+  <option>/</option>
+</select>
+<input #val2>
+<button (click)="calculate(ope.value, val1.value, val2.value)">=</button>
+<h3>{{result}}</h3>

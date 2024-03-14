@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(to right, rgba(24, 21, 209, 0.7), rgba(24, 21, 209, 0));
+        }
+
+        textarea {
+            font-size: x-large;
+            color: #0B29CF;
+            padding: 5px 5px 5px 10px;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<h2>Fake Typing</h2>
+<textarea rows="20" cols="90" data-action="0"></textarea>
+
+<script>
+    let x = "Hello World. My name is Quoc";
+    let txa = document.querySelector("textarea");
+
+    txa.addEventListener("input", e => {
+        let element = e.target;
+        let a = parseInt(element.dataset.action);
+        if (a === x.length) {
+            element.dataset.action = "0";
+        }
+
+        txa.value = x.substring(0, a);
+        element.dataset.action++;
+    })
+</script>
+
+<!--<textarea cols="40" rows="20"></textarea>
+<script>
+    const s = "My name is Quoc";
+    let a = document.querySelector("textarea");
+    let i = 0;
+
+    function fakeTyping(e){
+        i++;
+        if(i > s.length){
+            i = 1;
+        }
+
+        const t = s.substring(0, i);
+        e.preventDefault();
+        a.textContent = t;
+    }
+
+    a.addEventListener("keydown", fakeTyping);
+</script>-->
+</body>
+</html>

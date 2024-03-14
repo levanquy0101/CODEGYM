@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="play" onclick="fcnPlay()">Play</button>
+<button id="playAgain" disabled>Play again</button>
+<div></div>
+
+<script>
+    let count = 0;
+    let systemPredict = 0;
+    const play = document.getElementById("play");
+    const playAgain = document.getElementById("playAgain");
+    const msg = document.querySelector("div");
+
+    playAgain.onclick = function () {
+            count++;
+            fcnPlay();
+    }
+
+    function fcnPlay() {
+        play.disabled = true;
+        console.log(`count ${count}`)
+        if (count === 0) {
+            rangePredict();
+        }
+
+        const userPredict = +prompt("enter your number predict");
+        msg.innerHTML += `your number ${userPredict} <br>`;
+
+        if (systemPredict === userPredict) {
+            playAgain.disabled = true;
+            msg.innerHTML += `system number ${systemPredict} <br>`;
+            msg.innerHTML += "correct! congratulation!!";
+        } else if (userPredict > systemPredict) {
+            msg.innerHTML += "your number greater than system number<br>";
+            playAgain.disabled = false;
+        } else if (userPredict < systemPredict) {
+            msg.innerHTML += "your number less than system number<br>";
+            playAgain.disabled = false;
+        }
+
+        if(count>= 2){
+            playAgain.disabled = true;
+            msg.innerHTML += `system number ${systemPredict} <br>`;
+            msg.innerHTML += `Game over`;
+        }
+    }
+
+    function rangePredict() {
+        const from = +prompt("range number predict from");
+        const to = +prompt("range number predict to");
+
+        systemPredict = Math.floor(Math.random() * (to - from) + from);
+    }
+</script>
+</body>
+</html>

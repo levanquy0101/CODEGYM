@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // const minValue = (a,b,c) => {
+  //   const arr = [a,b,c];
+  //   let min = a;
+  //   for (let i = 1; i <= 2; i++) {
+  //     if(arr[i] < min){
+  //       min = arr[i];
+  //     }
+  //   }
+  //
+  //   return min;
+  // }
+
+  const minValue = (a,b,c) => Math.min(a,b,c);
+
+  const a = prompt();
+  const b = prompt();
+  const c = prompt();
+  alert(`min: ${minValue(a,b,c)}`);
+</script>
+</body>
+</html>

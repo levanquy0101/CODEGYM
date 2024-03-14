@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = "Hello World. My name     is Quoc".trim();
+    let count = 0;
+
+    for (let i = 1; i < s.length; i++) {
+        if (s[i] === ' ' && s[i + 1] !== ' ') {
+            count++;
+        }
+    }
+
+    console.log(count + 1);
+</script>
+</body>
+</html>

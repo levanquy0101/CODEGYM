@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile Class</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        fieldset {
+            width: 40%;
+            margin: 20px;
+            flex: 5;
+        }
+
+        fieldset div {
+            margin: 10px;
+        }
+
+        .text{
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <fieldset>
+        <legend>Nokia</legend>
+        <div>
+            <label>Phone Number</label>
+            <input id="nokiaNumber">
+        </div>
+        <div>
+            <label>To Phone Number</label>
+            <input id="nokiaToNumber">
+        </div>
+        <div class="text">
+            <label>Text</label>
+            <textarea cols="21" rows="8" id="nokiaText"></textarea>
+        </div>
+        <button onclick="nokia('init')">Init</button>
+        <button onclick="nokia('shutdown')">On/Off</button>
+        <button onclick="nokia('charge')">Charge Pin</button>
+        <button onclick="nokia('send')">Send</button>
+        <button onclick="nokia('inbox')">Inbox</button>
+        <button onclick="nokia('outbox')">OutBox</button>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Iphone</legend>
+        <div>
+            <label>Phone Number</label>
+            <input id="iphoneNumber">
+        </div>
+        <div>
+            <label>To Phone Number</label>
+            <input id="iphoneToNumber">
+        </div>
+        <div class="text">
+            <label>Text</label>
+            <textarea cols="21" rows="8" id="iphoneText"></textarea>
+        </div>
+        <button onclick="iphone('init')">Init</button>
+        <button onclick="iphone('shutdown')">On/Off</button>
+        <button onclick="iphone('charge')">Charge Pin</button>
+        <button onclick="iphone('send')">Send</button>
+        <button onclick="iphone('inbox')">Inbox</button>
+        <button onclick="iphone('outbox')">OutBox</button>
+    </fieldset>
+</div>
+
+
+<script>
+    class Mobile {
+        static message = [];
+        messageInbox = [];
+        messageSent = [];
+        messageComposing;
+        #pin = 50;
+        status;
+        toPhoneNumber;
+        text;
+
+        constructor(phoneNumber) {
+            this.phoneNumber = phoneNumber;
+            this.status = true;
+            this.getMessage();
+        }
+
+
+        chargePin() {
+            let interval = setInterval(() => {
+                this.#pin++;
+                console.log(this.#pin);
+
+                if (this.#pin == 100) {
+                    clearInterval(interval);
+                    console.log("battery is charge fully")
+                }
+            }, 3000);
+        }
+
+        get Status() {
+            this.#pin--;
+            return this.status;
+        }
+
+        set Status(s) {
+            this.#pin--;
+            this.status = s;
+        }
+
+        set Text(text) {
+            this.#pin--;
+            this.text = text;
+        }
+
+        get Text() {
+            this.#pin--;
+            return this.text;
+        }
+
+        set ToPhoneNumber(toPhoneNumber) {
+            this.toPhoneNumber = toPhoneNumber;
+        }
+
+        get ToPhoneNumber() {
+            return this.toPhoneNumber;
+        }
+
+        get Pin() {
+            return this.#pin;
+        }
+
+        set MessageComposing(text) {
+            this.#pin--;
+            this.messageComposing = text;
+        }
+
+        get MessageComposing() {
+            this.#pin--;
+            return this.messageComposing;
+        }
+
+        sendMessage() {
+            this.#pin--;
+            Mobile.message.push(this);
+            this.messageSent.push(this.text);
+        }
+
+        getMessage() {
+            if (this.status) {
+                setInterval(() => {
+                    if (this.status) {
+                        if (Mobile.message.length > 0) {
+                            for (let i = 0; i < Mobile.message.length; i++) {
+                                if (Mobile.message[i].toPhoneNumber == this.phoneNumber) {
+                                    this.messageInbox.push(Mobile.message[i].text);
+                                    Mobile.message.splice(i, 1);
+                                }
+                            }
+                        }
+                    }
+                }, 3000);
+            }
+        }
+    }
+
+    let n;
+    let i;
+
+    function nokia(action) {
+        switch (action) {
+            case 'init':
+                n = new Mobile(nokiaNumber.value);
+                console.log(n);
+                break;
+            case 'shutdown':
+                n.status = false;
+                break;
+            case 'send':
+                n.toPhoneNumber = nokiaToNumber.value;
+                n.text = nokiaText.value;
+                n.sendMessage();
+                break;
+            case 'inbox':
+                console.log(n.messageInbox);
+                break;
+            case 'outbox':
+                console.log(n.messageSent);
+                break;
+        }
+    }
+
+
+    function iphone(action) {
+        switch (action) {
+            case 'init':
+                i = new Mobile(iphoneNumber.value);
+                console.log(i);
+                break;
+            case 'shutdown':
+                console.log('s');
+                break;
+            case 'send':
+                console.log('send');
+            case 'inbox':
+                console.log(i.messageInbox);
+                break;
+            case 'outbox':
+                console.log(i.messageSent);
+                break;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e65d8c2a-8030-4526-a6a3-9031b17eba21" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../module4/_02_spring_controller/exercise/calculator/src/main/java/cg/m4/calculator/CalculatorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../module4/_02_spring_controller/exercise/calculator/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module2/src/case_study" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../module2/src/case_study" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product_discount_calculator.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../case_study_db" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../case_study_db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/7.1/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/7.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/7.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_01_overview_spring_mvc/practice/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_02_spring_controller/exercise/sandwich/src/main/java/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../module4/_02_spring_controller/exercise/sandwich/src/main/java/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../module4/_02_spring_controller/exercise/sandwich/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../module4/_02_spring_controller/exercise/sandwich/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="2C4M7SH7HPelW42JHzPVELlzflL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../10_jsp_jstl/exercise/e2/calculator" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e65d8c2a-8030-4526-a6a3-9031b17eba21" name="Default Changelist" comment="" />
+      <created>1658057236862</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658057236862</updated>
+      <workItem from="1658057238095" duration="43000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

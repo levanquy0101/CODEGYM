@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="img" style="position: relative;"/>
+
+<script>
+    class MovingObject {
+        #speed = 1;
+
+        constructor(x, y, img, movingType) {
+            this.x = x;
+            this.y = y;
+            this.img = img;
+            this.movingType = movingType;
+        }
+
+        async move() {
+            img.src = this.img;
+
+            if (this.movingType === 'leftToRight') {
+                await this.leftToRight();
+            } else {
+                await this.leftToRight();
+                await this.topToBottom();
+                await this.rightToLeft();
+                await this.bottomToTop();
+                console.log("test");
+            }
+        };
+
+        leftToRight() {
+            return new Promise(resolve => {
+                const run = setInterval(() => {
+                    this.x += this.#speed;
+                    img.style.left = this.x + 'px';
+
+                    if (this.x > window.innerWidth - 120) {
+                        clearInterval(run);
+                        resolve();
+                    }
+                }, 0);
+            });
+        }
+
+        topToBottom() {
+            return new Promise(resolve => {
+                const run = setInterval(() => {
+                    this.y += this.#speed;
+                    img.style.top = this.y + 'px';
+
+                    if (this.y > window.innerHeight - 120) {
+                        clearInterval(run);
+                        resolve();
+                    }
+                }, 0);
+            })
+        }
+
+        rightToLeft() {
+            return new Promise(resolve => {
+                const run = setInterval(() => {
+                    this.x -= this.#speed;
+                    img.style.left = this.x + 'px';
+
+                    if (this.x < 0) {
+                        clearInterval(run);
+                        resolve();
+                    }
+                }, 0);
+            });
+        }
+
+        bottomToTop() {
+            return new Promise(resolve => {
+                const run = setInterval(() => {
+                    this.y -= this.#speed;
+                    img.style.top = this.y + 'px';
+
+                    console.log(this.y);
+                    if (this.y < 0) {
+                        clearInterval(run);
+                        resolve();
+                    }
+                }, 0);
+            })
+        }
+    }
+
+    window.onload = function () {
+        const obj = new MovingObject(0, 0, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA2IZJYSa34VobkLZlDUpj8LsNsMloZndrH46oCqSCCg&s', 'all');
+        obj.move();
+    }
+</script>
+</body>
+</html>

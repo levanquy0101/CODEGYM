@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+<body class="text-danger">
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Preface</th>
+        <th>Author</th>
+        <th>Quantity</th>
+        <th>Published On</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="b,iter: ${books}">
+        <th th:text="${iter.count}"></th>
+        <td th:text="${b.title}"></td>
+        <td th:text="${b.preface}"></td>
+        <td th:text="${b.author}"></td>
+        <td th:text="${b.quantity}"></td>
+        <td th:text="${b.publishedOn}"></td>
+        <td>
+            <button th:onclick="borrow([[${b.id}]], [[${b.title}]])" type="button" class="btn btn-primary"
+                    data-bs-toggle="modal" data-bs-target="#borrowModal">
+                Borrow
+            </button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#broughtModal">
+                Brought
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="borrowModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form id="frmBorrow" action="/books/" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="borrowBook">Borrow Book</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">FullName</label>
+                            <div class="col-sm-10">
+                                <input name="fullName" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Phone</label>
+                            <div class="col-sm-10">
+                                <input name="phone" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label">Birthday</label>
+                            <div class="col-sm-10">
+                                <input name="birthdate" type="date" class="form-control" th:value="${#dates.format(#dates.createNow(), 'yyyy-MM-dd')}">
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="broughtModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form id="frmBrought" action="/books" th:method="put">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="broughtBook">Brought Book</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Code</label>
+                    <div class="col-sm-10">
+                        <input name="code" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+<script src="/webjars/bootstrap/js/bootstrap.bundle.js"></script>
+<script>
+    function borrow(bookid, bookName) {
+        borrowBook.innerHTML = "Borrow Book " + bookName;
+        frmBorrow.action += bookid;
+    }
+</script>
+</body>
+</html>

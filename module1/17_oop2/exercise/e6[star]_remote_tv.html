@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Remote{
+        constructor(code) {
+            this.code = code;
+        }
+
+        switchChannel(tv, channel){
+            tv.switchChannel(channel);
+        }
+
+        controlVolume(tv, isUp){
+            tv.controlVolume(isUp);
+        }
+
+        turnOnOff(tv, isOn){
+            tv.turnOnOff(isOn);
+        }
+    }
+
+    class TV{
+        constructor(currentChannel, currentVolume, status) {
+            this.currentChannel = currentChannel;
+            this.currentVolume =currentVolume;
+            this.status = status;
+        }
+
+        switchChannel(channel){
+            this.currentChannel = channel;
+        }
+
+        controlVolume(isUp){
+            isUp ? this.currentVolume++ : this.currentVolume--;
+        }
+
+        turnOnOff(isOn){
+            this.status = !!isOn;
+        }
+    }
+
+    const tv = new TV(2, 5, false);
+    console.log(`current channel: ${tv.currentChannel}`);
+    console.log(`current volume: ${tv.currentVolume}`);
+    console.log(`status TV: ${tv.status}`);
+
+    const remote = new Remote('R1');
+
+    tv.turnOnOff(true);
+    console.log(`after turnOn, status TV: ${tv.status}`);
+
+    tv.switchChannel(7);
+    console.log(`after switch channel, current channel: ${tv.currentChannel}`);
+
+    remote.switchChannel(tv,3);
+    console.log(`after use remote switch channel, current channel: ${tv.currentChannel}`)
+
+    remote.controlVolume(tv, true);
+    remote.controlVolume(tv, true);
+    console.log(`after use remote control volume, current volume: ${tv.currentVolume}`);
+
+    remote.turnOnOff(tv, false);
+    console.log(`after use remote turn off TV, status TV: ${tv.status}`);
+</script>
+</body>
+</html>

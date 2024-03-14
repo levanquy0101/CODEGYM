@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+
+    for (let i = 0; i < 10; i++) {
+        const tmp = +prompt(`enter number ${i + 1}`);
+        a.push(tmp);
+    }
+
+    let maxIndex = 0;
+    for (let i = 1; i < a.length; i++) {
+        if (a[i] > a[maxIndex]) {
+            maxIndex = i;
+        }
+    }
+
+    console.log(`max: ${a[maxIndex]} on index ${maxIndex}`);
+
+    /*console.log(Math.max(...a));*/
+</script>
+</body>
+</html>

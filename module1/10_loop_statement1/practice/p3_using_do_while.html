@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let count = 0;
+    let flag = false;
+
+    do {
+        count++;
+        value = flag? +prompt("Invalid. Please input again") : +prompt("Input number from 1->10");
+        flag = false;
+
+        if(value !== count){
+            flag = true;
+            count--;
+        }
+    } while (count < 10);
+</script>
+</body>
+</html>
